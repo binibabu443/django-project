@@ -1,0 +1,35 @@
+
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+<style>
+</style>
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li>Student Leave Apply</li>
+</ul>
+</div>
+<form action="{% url 'facultyleave' %}" method="POST">
+    
+    {% csrf_token %}
+<div class="cont">
+<form>
+<h3>Name:</h3>
+<input type="text" class="frm" name="name" placeholder="name">
+<h3>From Date:<h3>
+<input type="date" class="frm" name="fromdate" placeholder="fromdate">
+<h3>To Date:</h3>
+<input type="date" class="frm" name="todate" placeholder="to date">
+<h3>Leave Reason:</h3>
+<input type="text" class="frm" name="reason" placeholder="reason">
+<center><input type="submit" name="submit" class="btn" value="Submit"></center>
+</form>
+</div>
+</body>
+</html>

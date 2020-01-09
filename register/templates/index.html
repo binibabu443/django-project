@@ -1,0 +1,47 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+<title>home</title>
+
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+
+<style></style>
+</head>
+<body class="b">
+<!---------------------------------menubar-------------->
+
+<div class="navbar">
+<ul>
+<li>WELCOME</a></li>
+</ul>
+</div>
+
+<!-- menubar end -->
+<!-- content start -->
+
+
+<div class="log">
+<form action="{%url 'admin_login' %}" method='POST'>
+    {% csrf_token %}
+<input type="text" class="frm" placeholder="username" name="username">
+<input type="text"  class="frm" placeholder="password" name="password">
+<input type="submit" class="bt" value="send" >
+</form>
+</div>  
+</div>
+ 
+<!-- content end -->
+<!-- footer start -->
+
+<br><br><br><div class="ft">
+<footer>
+<p>&copy 2018-2019 copy company Inc.</p>
+</footer>
+</div>
+
+<!-- footer end -->
+
+</body>
+</html>

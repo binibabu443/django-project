@@ -1,0 +1,40 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+<style>
+</style>
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li>Student Attendance</li>
+</ul>
+</div>
+<form action="{% url 'stdattantance' %}" method="POST">
+    
+    {% csrf_token %}
+    
+<div class="cont">
+<h3>student id:</h3>
+<input type="text" class="frm" name="sid" placeholder="student id">
+<h3>date:<h3>
+<input type="date" class="frm" name="date" placeholder="date">
+<h3>Name</h3>
+<input type="text" class="frm" name="name" placeholder="name">
+<h3>Hour 1 status</h3>
+<input type="text" class="frm" name="hours1status" placeholder="first hour">
+<h3>Hour 2 status</h3>
+<input type="text" class="frm" name="hours2status" placeholder="second hour">
+<h3>Hour 3 status</h3>
+<input type="text" class="frm" name="hours3status" placeholder="third hour">
+<h3>Hour 4 status</h3>
+<input type="text" class="frm" name="hours4status" placeholder="fourth hour">
+<center><input type="submit" name="submit" class="btn" value="Submit"></center>
+</div>
+</form>
+
+</body>
+</html>

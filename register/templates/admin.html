@@ -1,0 +1,43 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+
+<style>
+</style>
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li><a href="{% url 'admin'%}">Admin page</a></li>
+<li><a href="{% url 'logout'%}">Logout</a></li>
+
+</ul>
+</div>
+<form >
+<div class="cont">
+
+
+    <h3>Add faculty:</h3>
+<form  action="{%url 'admin_login' %}" method='POST'>
+<center><button formaction="{%url 'addfaculty' %}" class="btn"  >add faculty</center>
+</form>
+
+<h3>View faculty:</h3>
+<form  action="{%url 'view_fac' %}" method='POST'>
+    {%csrf_token%}
+<center><input type="submit" class="btn"name="view_faculty"value="view faculty"></center>
+</form>
+
+<h3>View student:</h3>
+<form  action="{%url 'view_stud' %}" method='POST'>
+    {%csrf_token%}
+<center><input type="submit" class="btn"name="view_student"value="view student"></center>
+</form>
+
+</form>
+</div>
+</body>
+</html>

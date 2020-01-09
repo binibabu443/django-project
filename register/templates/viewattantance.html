@@ -1,0 +1,67 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet"href="{% static 'css/style3.css' %}">
+<style>
+    table,th,td{border:1px solid black;border-collapse:collapse;}
+</style>
+
+</head>
+<body class="b1">
+<div class="navbar">
+<ul>
+
+<li>Edit</li>
+<li><a href="{% url 'logout'%}">Logout</a></li>
+
+<div class="submenu">
+<ul>
+<li><a href="password.html">Password</a></li>
+<li><a href="mobile.html">Mobile</a></li>
+<li><a href="email.html">Email</a></li>
+
+</ul>
+</div>
+<li><a href="logout.html">Logout</a></li>
+</ul>
+</div>
+<div>
+    <h1>Attantance</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>sid</th>
+                <th>date</th>
+                <th>name</th>
+                <th>hours1status</th>
+                <th>hours2status</th>
+				<th>hours3status</th>
+				<th>hours4status</th>
+            </tr>
+        </thead>
+    <tbody>
+                {%if authorsss%}
+                {%for i in authorsss%}
+                <tr>
+				
+					<td>{{i.sid}}</td>
+					<td>{{i.date}}</td>
+					<td>{{i.name}}</td>
+                    <td>{{i.hours1status}}</td>
+                    <td>{{i.hours2status}}</td>
+                    <td>{{i.hours3status}}</td>
+                    <td>{{i.hours4status}}</td>
+                    
+                </tr>
+                {%endfor%}
+         {%endif%}    
+    </tbody>
+    </table>
+</div> 
+</div>
+</body>
+</html>  
+
+                
